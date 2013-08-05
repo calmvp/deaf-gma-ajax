@@ -1,1 +1,0 @@
-# Solution for Challenge: Deaf Sinatra 1: Synchronous Forms. Started 2013-08-05T16:43:16+00:00
