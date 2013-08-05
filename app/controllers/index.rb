@@ -8,10 +8,12 @@ post '/grandma' do
   # "Implement the /grandma route yourself.<br>Params: <code>#{params.inspect}</code>"
   input = params[:user_input]
   if input == input.upcase
-    @grandma = "Nonsense! Not since 1983!"
+    output = "Nonsense! Not since 1983!"
   else
-    @grandma = "Speak up, kiddo!"
+    output = "Speak up, kiddo!"
   end
-
-  erb :index
+  # erb :index
+  redirect "/?grandma=#{output}"
 end
+
+
