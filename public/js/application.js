@@ -6,6 +6,9 @@ $(document).ready(function() {
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
   $('form').submit(function() {
     event.preventDefault();
-    alert('.submit() called.');  
+    var phrase = $(this).serialize()
+    $.post('/grandma',phrase, function(server_response){
+      
+    }); 
   });
 });
