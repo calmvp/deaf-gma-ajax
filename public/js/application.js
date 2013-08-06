@@ -1,14 +1,11 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
-
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
-  $('form').submit(function() {
+  $('#nk_form').submit(function() {
     event.preventDefault();
-    var phrase = $(this).serialize()
-    $.post('/grandma',phrase, function(server_response){
-      
+    var url = $(this).attr("action");
+    var phrase = $(this).serialize();
+    $('p').hide();
+    $.post(url,phrase, function(server_response){
+      $('h1').after(server_response);
     }); 
   });
 });
